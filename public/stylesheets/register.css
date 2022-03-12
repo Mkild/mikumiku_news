@@ -1,0 +1,192 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    background: #34495e;
+  }
+  
+  .register-form {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+    border-radius: 3px;
+  }
+  
+  .register-form h1 {
+    font-family: sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  
+  .register-form a {
+    font-family: sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+
+  .register-form input {
+    display: block;
+    padding: 12px 10px;
+    text-align: center;
+    font-family: sans-serif;
+    background: none;
+    color: #191919;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    color: #ffffff;
+  }
+  
+  .register-form input[type='text'], .register-form input[type='password'] {
+    width: 70%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #3498db;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+  }
+  
+  .register-form input[type='text']:focus, .register-form input[type='password']:focus {
+    width: 90%;
+    border-color: #2ecc71;
+  }
+  
+  .register-form input[type='submit'] {
+    width: 50%;
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid #3ea682;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .register-form input[type='submit']:hover {
+    background: #2ecc71;
+  }
+
+  ul.left{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  ul.textleft{
+    color: #ffffff;
+    position: absolute;
+    top: 57%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  ul.right{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  ul.textright{
+    color: #ffffff;
+    position: absolute;
+    top: 57%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  ul li{
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    background: #262626;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: .5s;
+  }
+  
+  ul li:hover{
+    background: #0070ff;
+  }
+  
+  ul li span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #fff;
+    transition: .5s;
+  }
+  
+  ul li.next span{
+    top: 50%;
+    right: 45%;
+    transform: translateY(-50%) rotate(-45deg);
+    border-left: none;
+    border-top: none;
+  }
+  
+  ul li.next:hover span{
+    right: 30%;
+  }
+  
+  ul li.next span::before{
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background: #fff;
+    transform-origin: right;
+    transform: rotate(45deg) translate(0,25px) scaleX(0);
+    transition: .5s;
+  }
+  
+  ul li.next:hover span::before{
+    transform: rotate(45deg) translate(0,25px) scaleX(1);
+  }
+  
+  ul li.prev span{
+    top: 50%;
+    left: 45%;
+    transform: translateY(-50%) rotate(135deg);
+    border-left: none;
+    border-top: none;
+  }
+  
+  ul li.prev:hover span{
+    left: 30%;
+  }
+  
+  ul li.prev span::before{
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background: #fff;
+    transform-origin: right;
+    transform: rotate(45deg) translate(0,25px) scaleX(0);
+    transition: .5s;
+  }
+  
+  ul li.prev:hover span::before{
+    transform: rotate(45deg) translate(0,25px) scaleX(1);
+  }

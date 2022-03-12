@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <link rel="shortcut icon" href="/images/miku.ico" type="image/x-icon" />
+
+    <title>新闻-时政</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+          <img src="/images/miku.jpg" width="50" height="50" alt="">
+          新闻&nbsp;NEWS&nbsp;&nbsp;&nbsp;
+        </a>
+        <% if(name){ %>
+        <span class="navbar-text text-info">欢迎您，
+          <a href="/" target="_blank" class="text-info"><%= name %></a>
+        </span>&nbsp;&nbsp;&nbsp;
+        <span class="navbar-text text-warning">
+          <a href="/users/loginout" class="text-warning">登出</a>
+        </span>
+        <% }else{ %>
+        <span class="navbar-text text-secondary">未登录，请
+          <a href="/users/login" class="text-info">登录</a>
+        </span>
+        <% } %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">首页</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/politic">时政</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/military">军事</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="economic">财经</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ent">娱乐</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="culture">文化</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="game">游戏</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                用户系统
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/users" target="_blank">系统首页</a>
+                <a class="dropdown-item" href="/users/login" target="_blank">登录</a>
+                <a class="dropdown-item" href="/users/register" target="_blank">注册</a>
+              </div>
+            </li>
+          </ul>
+          <form action="/search" method="POST" class="form-inline" style="position: absolute;right: 0%;">
+            <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="请输入新闻关键字" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="sbtn" type="submit">Search</button>&nbsp;
+          </form>
+        </div>
+      </nav>
+
+      <% data.forEach(function(value){%>
+        <div class="card bg-light mb-3" style="max-width: 100%;">
+          <div class="row no-gutters">
+            <div class="col-md-4" style="max-width: 20%;">
+              <a href="/newcontent/<%= value.text_id %>"><img src="/upload/n<%= value.id %>p1.jpg" height="150" class="card-img-top" alt="..."></a>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><a href="/newcontent/<%= value.text_id %>"><%= value.title %></a></h5>
+                <p class="card-text"><%= value.cardtext %></p>
+                <p class="card-text"><small class="text-muted"><%= value.update_time %></small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+
+      <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+          <p class="float-right">
+            <a href="#">返回顶部</a>
+          </p>
+          <p><img src="/images/trails.png" width="100" height="100" alt="">
+            &copy; 2020-2021 <img src="/images/miku.jpg" width="25" height="25" alt="">News  By 1840129171-黄楚贤&emsp;&emsp;
+          <img src="/images/envelope.svg" alt="" width="32" height="32">
+          &nbsp;<a href="mailto:1427756365@qq.com">1427756365@qq.com</a>&emsp;
+          友情链接：<a href="https://www.guancha.cn/" target="_blank">观察者网</a> <a href="https://news.cctv.com/" target="_blank">央视新闻</a>
+         </p>
+        </div>
+      </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="/javascripts/search.js"></script>
+  </body>
+</html>

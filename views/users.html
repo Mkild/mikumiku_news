@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="Zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="shortcut icon" href="/images/maria_favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p style="text-align: center;">EJS Welcome to <%= title %></p>
+    <h1><%= Rmessage %></h1>
+
+    <% if(!name){ %>
+    <div>
+      <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="/users/login">登录</a></li>
+        <li><a href="/users/register">注册</a></li>
+      </ul>
+    </div>
+    <% }else{ %>
+    <div>
+      <ul class="na">
+        <h2><%= name %></h2>
+      </ul>
+      <ul>
+        <li><a href="/users/loginout">登出</a></li>
+        <li><a href="/">首页</a></li>
+        <li><a href="/users/userinfo">用户信息</a></li>
+        <li><a href="/users/friendlist">好友列表</a></li>
+        <% if(rolename == "管理员"){ %>
+        <li><a href="/users/usercontrol">用户管理</a></li>
+        <% } %>
+        <% if(rolename == "编辑" || rolename == "审核"){ %>
+          <li><a href="/users/newcontrol">新闻管理</a></li>
+        <% } %>
+      </ul>
+    </div>
+    <% } %>
+
+  </body>
+</html>

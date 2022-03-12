@@ -1,0 +1,133 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+
+.mytable{
+    background-color:#a9a9a9;
+    text-align: center;
+    border: solid;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul.left{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul.textleft{
+  color: #000000;
+  position: absolute;
+  top: 57%;
+  left: 10%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul.right{
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul.textright{
+  color: #000000;
+  position: absolute;
+  top: 57%;
+  left: 90%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li{
+  list-style: none;
+  width: 80px;
+  height: 80px;
+  background: #262626;
+  margin: 0 10px;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+ul li:hover{
+  background: #0070ff;
+}
+
+ul li span{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #fff;
+  transition: .5s;
+}
+
+ul li.next span{
+  top: 50%;
+  right: 45%;
+  transform: translateY(-50%) rotate(-45deg);
+  border-left: none;
+  border-top: none;
+}
+
+ul li.next:hover span{
+  right: 30%;
+}
+
+ul li.next span::before{
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 4px;
+  background: #fff;
+  transform-origin: right;
+  transform: rotate(45deg) translate(0,25px) scaleX(0);
+  transition: .5s;
+}
+
+ul li.next:hover span::before{
+  transform: rotate(45deg) translate(0,25px) scaleX(1);
+}
+
+ul li.prev span{
+  top: 50%;
+  left: 45%;
+  transform: translateY(-50%) rotate(135deg);
+  border-left: none;
+  border-top: none;
+}
+
+ul li.prev:hover span{
+  left: 30%;
+}
+
+ul li.prev span::before{
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 4px;
+  background: #fff;
+  transform-origin: right;
+  transform: rotate(45deg) translate(0,25px) scaleX(0);
+  transition: .5s;
+}
+
+ul li.prev:hover span::before{
+  transform: rotate(45deg) translate(0,25px) scaleX(1);
+}

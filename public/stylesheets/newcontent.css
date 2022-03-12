@@ -1,0 +1,26 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	min-height: 100vh;
+	background-color: #eeeeee;
+}
+
+nav{
+    font-size: 20px;
+}
+
+ul{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	font-size: 20px;
+}
+
+footer{
+	width: 100%;
+}

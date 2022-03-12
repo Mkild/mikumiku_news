@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="Zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>用户列表</title>
+    <link rel='stylesheet' href='/stylesheets/userlist.css' />
+    <link rel="shortcut icon" href="/images/maria_favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <table class="mytable">
+    <caption><h1>用户列表</h1></caption>
+    <tr>
+    <td><table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>用户ID</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>状态</th>
+    </tr>
+    </thead>
+    <tr>
+    <% userlist.forEach(function(value){ %>
+        <td><%= value.id %></td>
+        <td><%= value.user_id %></td>
+        <td><%= value.user_name %></td>
+        <td><%= value.password %></td>
+        <td><%= value.user_state %></td>
+    </tr>
+    <% }) %>
+    </table></td>
+    <td><table>
+        <thead>
+        <tr>
+            <th>权限</th>
+            <th>权限编号</th>
+        </tr>
+        </thead>
+        <tr>
+            <% roleid.forEach(function(value){ %>
+            <td><%= value.role_name %></td>
+            <td><%= value.id %></td>
+        </tr>
+        <% }) %>
+    </table></td>
+    <tr>
+    </table>
+
+    <ul class="left">
+        <li class="prev" onclick="window.location.href='/users/usercontrol/updateuser'"><span></span></li>
+        <br>
+      </ul>
+      <ul class="right">
+        <li class="next" onclick="window.location.href='/users/usercontrol'"><span></span></li>
+      </ul>
+
+      <ul class="textleft">修改用户</ul>
+      <ul class="textright">用户管理</ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>REGISTER</title>
+    <h2 style="text-align: center;"><%= Rmessage %></h2>
+    <h3 style="text-align: center;"><%= msg %></h3>
+    <link rel='stylesheet' href='/stylesheets/register.css' />
+    <link rel="shortcut icon" href="/images/maria_favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <ul class="left">
+      <li class="prev" onclick="window.location.href='/users/login'"><span></span></li>
+      <br>
+    </ul>
+    <ul class="right">
+      <li class="next" onclick="window.location.href='/users'"><span></span></li>
+    </ul>
+
+    <ul class="textleft">登录</ul>
+    <ul class="textright">主页</ul>
+
+      <form class="register-form" action="/users/checkregister" method="POST">
+          <h1>Register</h1>
+          <input type="text" name="user_id" id="user_id" placeholder="UserID(全数字,必填)">
+          <input type="text" name="username" id="username" placeholder="Username(必填)">
+          <input type="password" name="password" id="password" placeholder="Password(必填)">
+          <input type="submit" value="Register"><br>
+          <a href="/users/login">已经有账号？点击登录</a>
+      </form>
+    
+  </body>
+</html>

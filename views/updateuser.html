@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UPDATEUSER</title>
+    <h2 style="text-align: center;"><%= Umessage %></h2>
+    <h3 style="text-align: center;"><%= msg %></h3>
+    <link rel='stylesheet' href='/stylesheets/user_control.css' />
+    <link rel="shortcut icon" href="/images/maria_favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <ul class="left">
+      <li class="prev" onclick="window.location.href='/users/usercontrol'"><span></span></li>
+      <br>
+    </ul>
+    <ul class="right">
+      <li class="next" onclick="window.location.href='/users/usercontrol/userlist'"><span></span></li>
+    </ul>
+
+    <ul class="textleft">用户管理</ul>
+    <ul class="textright">用户列表</ul>
+
+      <form class="usercontrol-form" action="/users/usercontrol/checkupduser" method="POST">
+          <h1>UpdateUser</h1>
+          <input type="text" name="user_id" id="user_id" placeholder="请输入要修改的用户的UserID(全数字,必填)">
+          <input type="text" name="username" id="username" placeholder="请输入修改后的Username(必填)">
+          <input type="password" name="password" id="password" placeholder="请输入修改后的Password(必填)">
+          <input type="text" name="role_id" id="role_id" placeholder="修改后的RoleID(必填,1:管理员,2:普通用户,3:编辑,4:审核)">
+          <input type="submit" value="Submit">
+      </form>
+    
+  </body>
+</html>

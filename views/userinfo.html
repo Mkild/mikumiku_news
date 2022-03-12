@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="shortcut icon" href="/images/maria_favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <h1><%= message %></h1><br>
+    <h2 style="text-align: center;">用户名：<%= name %></h2><br>
+    <h2 style="text-align: center;">权限：<%= rolename %></h2><br><br><br><br><br>
+    <div style="text-align: center;">
+    <h2>详细信息</h2>
+        <h3>
+            <% infoData.forEach(function(info){%>
+                ID：<%=info.id %><br>
+                用户ID：<%=info.user_id %><br>
+                性别：<%=info.sex %><br>
+                技能：<%=info.skill %><br>
+                个性签名：<%=info.msg %><br>
+                图片url：<%=info.imgurl %><br>
+            <% }) %>
+            <% adData.forEach(function(address){%>
+                地址：<%=address.address %><br>
+            <% }) %>
+        </h3>
+    </div>
+   
+    <ul>
+    <li><a href="/users">返回主页</a></li>
+    </ul>
+</body>
+</html>

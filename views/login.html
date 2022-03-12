@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+    <h1 style="text-align: center;"><%= message %></h1>
+    <h2 style="text-align: center;"><%= msg %></h2>
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <link rel="shortcut icon" href="/images/maria_favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <ul class="left">
+      <li class="prev" onclick="window.location.href='/users'"><span></span></li>
+      <br>
+    </ul>
+    <ul class="right">
+      <li class="next" onclick="window.location.href='/users/register'"><span></span></li>
+    </ul>
+
+    <ul class="textleft">主页</ul>
+    <ul class="textright">注册</ul>
+
+      <form class="login-form" action="/users/checklogin" method="POST">
+          <h1>Login</h1>
+          <input type="text" name="user_id" id="user_id" placeholder="UserID">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <input type="submit" value="Login"><br>
+          <a href="/users/register">还没有账号？点击注册</a>
+      </form>
+    
+  </body>
+</html>

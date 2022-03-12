@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="Zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>好友列表</title>
+    <link rel='stylesheet' href='/stylesheets/userlist.css' />
+    <link rel="shortcut icon" href="/images/maria_favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <table class="mytable">
+    <caption><h1>好友列表</h1></caption>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>用户ID</th>
+        <th>用户名</th>
+        <th>性别</th>
+        <th>技能</th>
+        <th>个性签名</th>
+        <th>图片url</th>
+    </tr>
+    </thead>
+    <tr>
+    <% friendsData.forEach(function(value){ %>
+        <td><%= value.user_info.id %></td>
+        <td><%= value.user_info.user_id %></td>
+        <td><%= value.user_info.user_name %></td>
+        <td><%= value.user_info.sex %></td>
+        <td><%= value.user_info.skill %></td>
+        <td><%= value.user_info.msg %></td>
+        <td><%= value.user_info.imgurl %></td>
+    </tr>
+    <% }) %>
+    </table>
+
+    <ul class="left">
+        <li class="prev" onclick="window.location.href='/users/userinfo'"><span></span></li>
+        <br>
+      </ul>
+      <ul class="right">
+        <li class="next" onclick="window.location.href='/users'"><span></span></li>
+      </ul>
+
+      <ul class="textleft">用户信息</ul>
+      <ul class="textright">返回主页</ul>
+</body>
+</html>
