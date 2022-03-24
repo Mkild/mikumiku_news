@@ -12,7 +12,7 @@
 
 一个平平无奇的新闻网站，过时的。
 
-前后端不分离，个人早期项目，留作纪念...
+前后端不分离，个人早期项目。
 
 前台包含首页门户、新闻分类浏览、点赞新闻、评论新闻、新闻搜索、用户系统等，
 
@@ -37,6 +37,7 @@ npm install
 # 修改MySQL配置
 # 修改根目录下config文件夹中的 mysql_config.js 和 mysql_sequelize.js 中的配置
 # 将user、password等修改成你自己MySQL中的user、password等
+# 为方便使用、降低使用门槛才将配置信息保存在项目根目录，请注意保护好自己的配置信息，采用其他方式保管
 # 将根目录的koa_test.sql导入MySQL
 # 启动服务 （默认为http://localhost:3000）
 npm run start  / nodemon
